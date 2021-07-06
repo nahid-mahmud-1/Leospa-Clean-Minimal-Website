@@ -1,0 +1,174 @@
+/*Google Fonts Variable */
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Rufina', serif;
+
+/* Global Color Variable */
+$primary-color: #ff817e;
+$secondary-color: #1E2528;
+$body-font-color: #888888;
+$gray-color: #555; 
+$white-color: #fff;
+$pink-light: #FCF5EE;
+
+/* Global Font Size Variable */
+$body-font-size: 15px;
+$heading-font-size-1: 60px;
+$heading-font-size-2: 60px;
+$heading-font-size-3: 42px;
+$heading-font-size-4: 22px;
+$heading-font-size-5: 18px;
+$heading-font-size-6: 16px;
+
+/* Global @Funtion Style */
+
+/*Global @Mixin Style */
+@mixin button-global() {
+    color: $white-color;
+    background: $primary-color;
+    font-size: 16px;
+    font-family: $primary-font;
+    font-weight: 500;
+    border: 1px solid $primary-color;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    &:hover{
+        color: $secondary-color;
+    }
+}
+
+/* Global @Extend Style */
+
+/* Global Style */
+body{
+    color: $body-font-color;
+    font-size: $body-font-size;
+    font-family: $primary-font;
+    font-weight: 300;
+}
+p{
+    color: $body-font-color;
+    font-size: $body-font-size;
+    font-family: $primary-font;
+    font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6{
+    color: $secondary-color;
+    font-family: $secondary-font;
+    font-weight: 700;
+}
+h1{
+    font-size: $heading-font-size-1;
+}
+h2{
+    font-size: $heading-font-size-2;
+    line-height: 70px;
+}
+h3{
+    font-size: $heading-font-size-3;
+}
+h4{
+    font-size: $heading-font-size-4;
+}
+h5{
+    font-size: $heading-font-size-5;
+}
+h6{
+    font-size: $heading-font-size-6;
+}
+button,.btn-global{
+    @include button-global();
+}
+a{
+    color: $secondary-color;
+    font-family: $primary-font;
+    text-decoration: none;
+}
+
+/* Theme Main CSS */
+/* Header Section */
+header{
+    padding: 15px 0px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+header{
+    .row{
+        align-items: center;
+    }
+    .main-menu{
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+            padding: 10px 20px;
+            transition: 0.3s ease-in-out;
+
+            a{
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+/* Banner Section */
+.banner-section{
+    padding: 170px 0px 80px;
+    background: $white-color url(../images/leaf.png) no-repeat center left;
+    background-size: 12%;
+    position: relative;
+}
+.banner-section{
+    .banner-img{
+        img{
+            position: absolute;
+            width: 43.4%;
+            right: 0;
+            top: 0;
+        }
+    }
+    .banner-top-title{
+        color: $primary-color;
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    h2{
+        padding: 35px 0px;
+    }
+    p{
+        color: $gray-color;
+        line-height: 30px;
+    }
+    .baner-button-box{
+        display: flex;
+        padding-top: 45px;
+        align-items: center;
+        position: relative;
+
+        i{
+            font-size: 40px;
+            color: $primary-color;
+            padding: 0px 10px 0px 20px;
+        }
+        span{
+            color: $gray-color;
+            font-weight: 400;
+            position: absolute;
+            line-height: 40px;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+

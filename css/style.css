@@ -1,0 +1,153 @@
+/*Google Fonts Variable */
+/* Global Color Variable */
+/* Global Font Size Variable */
+/* Global @Funtion Style */
+/*Global @Mixin Style */
+/* Global @Extend Style */
+/* Global Style */
+body {
+  color: #888888;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+p {
+  color: #888888;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1E2528;
+  font-family: "Rufina", serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 70px;
+}
+
+h3 {
+  font-size: 42px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+button, .btn-global {
+  color: #fff;
+  background: #ff817e;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border: 1px solid #ff817e;
+  padding: 15px 30px;
+  text-transform: uppercase;
+}
+button:hover, .btn-global:hover {
+  color: #1E2528;
+}
+
+a {
+  color: #1E2528;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+/* Theme Main CSS */
+/* Header Section */
+header {
+  padding: 15px 0px;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header .row {
+  align-items: center;
+}
+header .main-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .main-menu li {
+  padding: 10px 20px;
+  transition: 0.3s ease-in-out;
+}
+header .main-menu li a {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+header .main-menu li a:hover {
+  color: #ff817e;
+}
+
+/* Banner Section */
+.banner-section {
+  padding: 170px 0px 80px;
+  background: #fff url(../images/leaf.png) no-repeat center left;
+  background-size: 12%;
+  position: relative;
+}
+
+.banner-section .banner-img img {
+  position: absolute;
+  width: 43.4%;
+  right: 0;
+  top: 0;
+}
+.banner-section .banner-top-title {
+  color: #ff817e;
+  font-family: "Rufina", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.banner-section h2 {
+  padding: 35px 0px;
+}
+.banner-section p {
+  color: #555;
+  line-height: 30px;
+}
+.banner-section .baner-button-box {
+  display: flex;
+  padding-top: 45px;
+  align-items: center;
+  position: relative;
+}
+.banner-section .baner-button-box i {
+  font-size: 40px;
+  color: #ff817e;
+  padding: 0px 10px 0px 20px;
+}
+.banner-section .baner-button-box span {
+  color: #555;
+  font-weight: 400;
+  position: absolute;
+  line-height: 40px;
+}
+.banner-section .baner-button-box span:hover {
+  color: #ff817e;
+}
+
+/*# sourceMappingURL=style.css.map */
