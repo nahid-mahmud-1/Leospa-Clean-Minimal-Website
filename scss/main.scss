@@ -320,16 +320,15 @@ header{
             border-color: $black-light-color;
             margin: 30px 0px;
             transition: 0.3s ease-in-out;
-
-            &:hover{
-                color: $white-color;
-                background: $primary-color;
-                border-color: $primary-color;
-            }
         }
     }
-
+    &:hover .service-button{
+        color: $white-color;
+        background: $primary-color;
+        border-color: $primary-color;
+    }
     &:hover{
+        cursor: pointer;
         box-shadow: 0 5px 20px #f0f0f0;
     }
 }
@@ -482,4 +481,31 @@ header{
     textarea{
         height: 60px !important;
     }
+}
+
+/* Blog Section */
+.blog-section{
+    @extend %section-padding;
+    @extend %section-title-style;
+    background: $white-color;
+}
+.blog-item-box{
+    @extend .service-item-box;
+    .featured-img{
+        @extend .featured-img;
+        margin: -20px;
+        margin-bottom: 0px;
+    }
+    .blog-body-content{
+        @extend .service-body-content;
+        .blog-button{
+            @extend .service-button;
+        }
+    }
+}
+
+/* Footer Section */
+footer{
+    @extend %section-padding;
+    background: $pink-light-color;
 }

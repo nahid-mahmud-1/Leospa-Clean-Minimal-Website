@@ -4,21 +4,21 @@
 /* Global Font Size Variable */
 /*Global @Mixin Style */
 /* Global @Extend Style */
-.team-section, .testimonial-section, .services-section, .about-section {
+footer, .blog-section, .team-section, .testimonial-section, .services-section, .about-section {
   padding: 70px 0px;
 }
 
-.team-section .section-title-wrapper, .services-section .section-title-wrapper, .about-section .section-title-wrapper {
+.blog-section .section-title-wrapper, .team-section .section-title-wrapper, .services-section .section-title-wrapper, .about-section .section-title-wrapper {
   text-align: center;
 }
-.team-section .section-title-wrapper span, .services-section .section-title-wrapper span, .about-section .section-title-wrapper span {
+.blog-section .section-title-wrapper span, .team-section .section-title-wrapper span, .services-section .section-title-wrapper span, .about-section .section-title-wrapper span {
   color: #888888;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
   padding: 30px 0px;
 }
-.team-section .section-title-wrapper h3, .services-section .section-title-wrapper h3, .about-section .section-title-wrapper h3 {
+.blog-section .section-title-wrapper h3, .team-section .section-title-wrapper h3, .services-section .section-title-wrapper h3, .about-section .section-title-wrapper h3 {
   padding: 30px 0px;
 }
 
@@ -260,23 +260,23 @@ header .main-menu li a:hover {
   padding: 30px;
 }
 
-.service-item-box {
+.service-item-box, .blog-item-box {
   padding: 20px;
   background: #fff;
   border: 1px solid #e3e6ea;
   transition: 0.3s ease-in-out;
 }
-.service-item-box .service-body-content {
+.service-item-box .service-body-content, .blog-item-box .service-body-content, .blog-item-box .blog-body-content {
   text-align: center;
 }
-.service-item-box .service-body-content h4 {
+.service-item-box .service-body-content h4, .blog-item-box .service-body-content h4, .blog-item-box .blog-body-content h4 {
   padding-top: 30px;
   padding-bottom: 20px;
 }
-.service-item-box .service-body-content h4 a {
+.service-item-box .service-body-content h4 a, .blog-item-box .service-body-content h4 a, .blog-item-box .blog-body-content h4 a {
   font-family: "Rufina", serif;
 }
-.service-item-box .service-body-content .service-button {
+.service-item-box .service-body-content .service-button, .blog-item-box .service-body-content .service-button, .blog-item-box .blog-body-content .service-button, .blog-item-box .blog-body-content .blog-button {
   padding-top: 12px;
   padding-bottom: 12px;
   background: #30383b;
@@ -284,12 +284,13 @@ header .main-menu li a:hover {
   margin: 30px 0px;
   transition: 0.3s ease-in-out;
 }
-.service-item-box .service-body-content .service-button:hover {
+.service-item-box:hover .service-button, .service-item-box:hover .blog-item-box .blog-body-content .blog-button, .blog-item-box .blog-body-content .service-item-box:hover .blog-button, .blog-item-box:hover .service-button, .blog-item-box:hover .blog-body-content .blog-button {
   color: #fff;
   background: #ff817e;
   border-color: #ff817e;
 }
-.service-item-box:hover {
+.service-item-box:hover, .blog-item-box:hover {
+  cursor: pointer;
   box-shadow: 0 5px 20px #f0f0f0;
 }
 
@@ -424,6 +425,20 @@ header .main-menu li a:hover {
 }
 .appoinment-section .form-wrapper textarea {
   height: 60px !important;
+}
+
+/* Blog Section */
+.blog-section {
+  background: #fff;
+}
+
+.blog-item-box .featured-img {
+  margin: -20px;
+  margin-bottom: 0px;
+}
+/* Footer Section */
+footer {
+  background: #FFF9F8;
 }
 
 /*# sourceMappingURL=style.css.map */
