@@ -436,14 +436,50 @@
         <!-- Appoinment Section Start -->
         <section class="appoinment-section">
             <div class="container-fluid">
-                <div class="col-md-5">
-                    <!-- Appoinment Image -->
-                    <div class="appoinment-image-box">
-                        <img src="./images/appointment-img.jpg" alt="Appoiment Image" class="img-fit">
+                <div class="row">
+                    <div class="col-md-5 appoinment-image-box">
+                        <div class="section-spacer"></div>
                     </div>
-                </div>
-                <div class="col-md-7"></div>
-            </div>
+    
+                    <div class="col-md-7">
+                        <!-- Form Start -->
+                        <div class="form-wrapper">
+                            <form action="" method="">
+                                <div class="form-group half-width">
+                                    <input type="text" placeholder="Name" name="name" id="name" class="form-control">
+                                </div>
+                                <div class="form-group half-width">
+                                    <input type="email" placeholder="Email Address" id="email" name="email" class="form-control">
+                                </div>
+                                <div class="form-group half-width">
+                                    <select name="select-service" id="service" class="form-control select-menu">
+                                        <option value="select">Select Service</option>
+                                        <option value="normal">Normal Service</option>
+                                        <option value="vip">VIP Service</option>
+                                    </select>
+                                </div>
+                                <div class="form-group half-width">
+                                    <input type="tel" placeholder="Phone Number" name="number" id="phone" class="form-control">
+                                </div>
+                                <div class="form-group half-width">
+                                    <input type="date" placeholder="Date" name="date" id="date" class="form-control">
+                                </div>
+                                <div class="form-group half-width">
+                                    <input type="time" placeholder="Time" name="time" id="time" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <textarea placeholder="Your Notes" name="message" id="message" rows="10" class="form-control"></textarea>
+                                </div>
+                                <button type="submit" class="btn-global btn-round">Make an appoinment</button>
+                            </form>
+                        </div>
+                        <!-- Form End -->
+
+                    </div>
+
+                </div><!-- Row End -->
+
+            </div><!-- Container End -->
         </section>
         <!-- Appoinment Section End -->
 

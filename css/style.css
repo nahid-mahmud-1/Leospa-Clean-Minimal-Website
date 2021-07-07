@@ -111,6 +111,10 @@ a {
   padding: 30px;
 }
 
+.half-width {
+  max-width: 50% !important;
+}
+
 /* Theme Main CSS */
 /* Header Section */
 header {
@@ -291,7 +295,7 @@ header .main-menu li a:hover {
 
 /* Testimonial Section */
 .testimonial-section {
-  background: #FCF5EE;
+  background: #FFF9F8;
 }
 
 .testimonial-carousel .owl-dot span {
@@ -379,8 +383,47 @@ header .main-menu li a:hover {
 }
 
 /* Appoinment Section */
-.appoinment Section {
-  background: #FCF5EE;
+.appoinment-section {
+  background: #FFF9F8;
+}
+
+.appoinment-image-box {
+  background: url(../images/appointment-img.jpg) no-repeat left;
+  background-size: cover;
+}
+
+.appoinment-section .form-wrapper {
+  padding: 30px 40px;
+}
+.appoinment-section .form-wrapper form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.appoinment-section .form-wrapper form ::placeholder {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.appoinment-section .form-wrapper .half-width {
+  width: 49%;
+}
+.appoinment-section .form-wrapper .form-group {
+  width: 100%;
+  margin: 20px 0px;
+}
+.appoinment-section .form-wrapper .form-control {
+  color: #888888;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-bottom: 2px solid #d4d3d3;
+  background: transparent;
+}
+.appoinment-section .form-wrapper .select-menu {
+  text-transform: uppercase;
+}
+.appoinment-section .form-wrapper textarea {
+  height: 60px !important;
 }
 
 /*# sourceMappingURL=style.css.map */
