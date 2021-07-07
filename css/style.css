@@ -4,25 +4,49 @@
 /* Global Font Size Variable */
 /*Global @Mixin Style */
 /* Global @Extend Style */
-footer, .blog-section, .team-section, .testimonial-section, .services-section, .about-section {
+footer, .contact-section, .blog-section, .team-section, .testimonial-section, .services-section, .about-section {
   padding: 70px 0px;
 }
 
-.blog-section .section-title-wrapper, .team-section .section-title-wrapper, .services-section .section-title-wrapper, .about-section .section-title-wrapper {
+.contact-section .section-title-wrapper, .blog-section .section-title-wrapper, .team-section .section-title-wrapper, .services-section .section-title-wrapper, .about-section .section-title-wrapper {
   text-align: center;
 }
-.blog-section .section-title-wrapper span, .team-section .section-title-wrapper span, .services-section .section-title-wrapper span, .about-section .section-title-wrapper span {
+.contact-section .section-title-wrapper span, .blog-section .section-title-wrapper span, .team-section .section-title-wrapper span, .services-section .section-title-wrapper span, .about-section .section-title-wrapper span {
   color: #888888;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
   padding: 30px 0px;
 }
-.blog-section .section-title-wrapper h3, .team-section .section-title-wrapper h3, .services-section .section-title-wrapper h3, .about-section .section-title-wrapper h3 {
+.contact-section .section-title-wrapper h3, .blog-section .section-title-wrapper h3, .team-section .section-title-wrapper h3, .services-section .section-title-wrapper h3, .about-section .section-title-wrapper h3 {
   padding: 30px 0px;
 }
 
-.team-section .team-member-box .team-member-bio .social-icon-box, .team-section .team-member-box .team-member-bio, .team-section .team-member-box {
+.contact-section form, .appoinment-section .form-wrapper form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact-section form ::placeholder, .appoinment-section .form-wrapper form ::placeholder {
+  text-transform: uppercase;
+}
+.contact-section .form-group, .appoinment-section .form-wrapper .form-group {
+  width: 100%;
+  margin: 10px 0px;
+}
+.contact-section .form-control, .appoinment-section .form-wrapper .form-control {
+  color: #888888;
+  width: 100%;
+  height: 45px;
+  border: 1px solid #d4d3d3;
+  padding: 10px;
+  background: transparent;
+}
+.contact-section textarea, .appoinment-section .form-wrapper textarea {
+  height: 60px !important;
+}
+
+.footer-social-icon a, .footer-menu-wrapper a, .contact-section .address-wrapper address a, .team-section .team-member-box .team-member-bio .social-icon-box, .team-section .team-member-box .team-member-bio, .team-section .team-member-box, header .main-menu li a {
   -webkit-animation-delay: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -136,7 +160,6 @@ header .main-menu {
 }
 header .main-menu li {
   padding: 10px 20px;
-  transition: 0.3s ease-in-out;
 }
 header .main-menu li a {
   font-size: 14px;
@@ -396,35 +419,22 @@ header .main-menu li a:hover {
 .appoinment-section .form-wrapper {
   padding: 30px 40px;
 }
-.appoinment-section .form-wrapper form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 .appoinment-section .form-wrapper form ::placeholder {
   font-size: 14px;
-  text-transform: uppercase;
+}
+.appoinment-section .form-wrapper .form-group {
+  margin: 20px 0px;
 }
 .appoinment-section .form-wrapper .half-width {
   width: 49%;
 }
-.appoinment-section .form-wrapper .form-group {
-  width: 100%;
-  margin: 20px 0px;
-}
 .appoinment-section .form-wrapper .form-control {
-  color: #888888;
-  width: 100%;
-  height: 45px;
   border: none;
+  padding: 0;
   border-bottom: 2px solid #d4d3d3;
-  background: transparent;
 }
 .appoinment-section .form-wrapper .select-menu {
   text-transform: uppercase;
-}
-.appoinment-section .form-wrapper textarea {
-  height: 60px !important;
 }
 
 /* Blog Section */
@@ -436,9 +446,96 @@ header .main-menu li a:hover {
   margin: -20px;
   margin-bottom: 0px;
 }
+/* Contact Section */
+.contact-section {
+  background: #fff;
+  padding-top: 0px;
+}
+
+.contact-section .address-wrapper {
+  padding-top: 30px;
+}
+.contact-section .address-wrapper address {
+  position: relative;
+  color: #555;
+  padding-left: 80px;
+  line-height: 25px;
+  margin-bottom: 25px;
+}
+.contact-section .address-wrapper address span {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  line-height: 50px;
+  text-align: center;
+  background: #ff817e;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contact-section .address-wrapper address a:hover {
+  color: #ff817e;
+}
+.contact-section .form-control {
+  height: 55px;
+}
+.contact-section textarea {
+  height: 80px !important;
+}
+.contact-section .contact-button {
+  margin-top: 10px;
+}
+
 /* Footer Section */
 footer {
   background: #FFF9F8;
+}
+footer p {
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+}
+footer p span {
+  color: #ff817e;
+}
+
+.footer-logo-wrapper {
+  text-align: center;
+}
+
+.footer-menu-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.footer-menu-wrapper a {
+  color: #1E2528;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 20px;
+}
+.footer-menu-wrapper a:hover {
+  color: #ff817e;
+}
+
+.footer-social-icon {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 25px;
+}
+.footer-social-icon a {
+  width: 35px;
+  text-align: center;
+}
+.footer-social-icon a:not(:last-child) {
+  border-right: 1px solid #555;
+}
+.footer-social-icon a:hover {
+  color: #ff817e;
 }
 
 /*# sourceMappingURL=style.css.map */
