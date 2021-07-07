@@ -1,9 +1,33 @@
+/* Global @Funtion Style */
 /*Google Fonts Variable */
 /* Global Color Variable */
 /* Global Font Size Variable */
-/* Global @Funtion Style */
 /*Global @Mixin Style */
 /* Global @Extend Style */
+.team-section, .testimonial-section, .services-section, .about-section {
+  padding: 70px 0px;
+}
+
+.team-section .section-title-wrapper, .services-section .section-title-wrapper, .about-section .section-title-wrapper {
+  text-align: center;
+}
+.team-section .section-title-wrapper span, .services-section .section-title-wrapper span, .about-section .section-title-wrapper span {
+  color: #888888;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 30px 0px;
+}
+.team-section .section-title-wrapper h3, .services-section .section-title-wrapper h3, .about-section .section-title-wrapper h3 {
+  padding: 30px 0px;
+}
+
+.team-section .team-member-box .team-member-bio .social-icon-box, .team-section .team-member-box .team-member-bio, .team-section .team-member-box {
+  -webkit-animation-delay: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
 /* Global Style */
 body {
   color: #888888;
@@ -17,6 +41,7 @@ p {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  line-height: 28px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,7 +75,7 @@ h6 {
   font-size: 16px;
 }
 
-button, .btn-global {
+button, .btn-global, .btn-round {
   color: #fff;
   background: #ff817e;
   font-size: 16px;
@@ -59,15 +84,31 @@ button, .btn-global {
   border: 1px solid #ff817e;
   padding: 15px 30px;
   text-transform: uppercase;
+  cursor: pointer;
 }
-button:hover, .btn-global:hover {
+button:hover, .btn-global:hover, .btn-round:hover {
   color: #1E2528;
+}
+
+.btn-round {
+  border-radius: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 a {
   color: #1E2528;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
+}
+
+.img-fit {
+  width: 100%;
+  display: block;
+}
+
+.section-spacer {
+  padding: 30px;
 }
 
 /* Theme Main CSS */
@@ -129,25 +170,217 @@ header .main-menu li a:hover {
   color: #555;
   line-height: 30px;
 }
-.banner-section .baner-button-box {
+.banner-section .baner-button-wrapper {
   display: flex;
   padding-top: 45px;
   align-items: center;
   position: relative;
 }
-.banner-section .baner-button-box i {
+.banner-section .baner-button-wrapper i {
   font-size: 40px;
   color: #ff817e;
   padding: 0px 10px 0px 20px;
 }
-.banner-section .baner-button-box span {
+.banner-section .baner-button-wrapper span {
   color: #555;
   font-weight: 400;
   position: absolute;
   line-height: 40px;
 }
-.banner-section .baner-button-box span:hover {
+.banner-section .baner-button-wrapper span:hover {
   color: #ff817e;
+}
+
+/* About Section */
+.about-section {
+  background: #fff;
+}
+
+.about-section .section-title-wrapper p {
+  width: 80%;
+  margin: auto;
+}
+
+.section-top-image {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0px;
+}
+
+.about-section .btn-wrapper {
+  text-align: center;
+  margin: auto;
+  padding-top: 55px;
+}
+.about-section .section-spacer {
+  padding: 50px;
+}
+.about-section .feature-item-box {
+  position: relative;
+}
+.about-section .feature-item-box .hover-effect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 129, 126, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.about-section .feature-item-box .hover-effect .hover-content img {
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+.about-section .feature-item-box .hover-effect .hover-content span {
+  color: #fff;
+  font-family: "Rufina", serif;
+  font-weight: 700;
+}
+.about-section .feature-item-box:hover .hover-effect {
+  opacity: 1;
+}
+
+/* Services Section */
+.services-section {
+  padding-top: 0px;
+  background: #fff;
+}
+
+.services-section .section-spacer {
+  padding: 30px;
+}
+
+.service-item-box {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e3e6ea;
+  transition: 0.3s ease-in-out;
+}
+.service-item-box .service-body-content {
+  text-align: center;
+}
+.service-item-box .service-body-content h4 {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.service-item-box .service-body-content h4 a {
+  font-family: "Rufina", serif;
+}
+.service-item-box .service-body-content .service-button {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: #30383b;
+  border-color: #30383b;
+  margin: 30px 0px;
+  transition: 0.3s ease-in-out;
+}
+.service-item-box .service-body-content .service-button:hover {
+  color: #fff;
+  background: #ff817e;
+  border-color: #ff817e;
+}
+.service-item-box:hover {
+  box-shadow: 0 5px 20px #f0f0f0;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background: #FCF5EE;
+}
+
+.testimonial-carousel .owl-dot span {
+  width: 8px !important;
+  height: 8px !important;
+  background: #ff817e !important;
+}
+
+.testmonial-box {
+  text-align: center;
+}
+.testmonial-box .quote-img {
+  width: auto !important;
+  margin: 0 auto;
+}
+.testmonial-box p {
+  color: #555;
+  font-size: 18px;
+  font-family: "Rufina", serif;
+  line-height: 32px;
+  padding: 40px 0px;
+}
+.testmonial-box .testimonial-user-box .image-circle-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0px auto 20px;
+}
+.testmonial-box .testimonial-user-box h4 {
+  font-weight: 400;
+}
+.testmonial-box .testimonial-user-box h4 span {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/* Team Section */
+.team-section {
+  background: #fff;
+}
+
+.team-section .team-member-box {
+  position: relative;
+}
+.team-section .team-member-box .team-member-bio {
+  width: calc(100% - 60px);
+  text-align: center;
+  background: #fff;
+  padding: 30px 0px;
+  line-height: 30px;
+  box-shadow: 0 5px 20px #f0f0f0;
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+}
+.team-section .team-member-box .team-member-bio .social-icon-box {
+  visibility: hidden;
+  margin-top: -20px;
+  padding: 10px 0px;
+  opacity: 0;
+}
+.team-section .team-member-box .team-member-bio .social-icon-box a {
+  width: 30px;
+  height: 30px;
+  margin: 0px 5px;
+  border: 1px solid #1E2528;
+  line-height: 30px;
+  border-radius: 100%;
+  display: inline-block;
+}
+.team-section .team-member-box .team-member-bio .social-icon-box a:hover {
+  color: #fff;
+  background: #ff817e;
+  border-color: #ff817e;
+}
+.team-section .team-member-box:hover .team-member-bio {
+  top: -80px;
+}
+.team-section .team-member-box:hover .social-icon-box {
+  visibility: visible;
+  margin-top: 0;
+  opacity: 1;
+}
+
+/* Appoinment Section */
+.appoinment Section {
+  background: #FCF5EE;
 }
 
 /*# sourceMappingURL=style.css.map */

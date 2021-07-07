@@ -1,3 +1,6 @@
+/* Global @Funtion Style */
+$theme-skin: 'light';
+
 /*Google Fonts Variable */
 $primary-font: 'Roboto', sans-serif;
 $secondary-font: 'Rufina', serif;
@@ -6,9 +9,12 @@ $secondary-font: 'Rufina', serif;
 $primary-color: #ff817e;
 $secondary-color: #1E2528;
 $body-font-color: #888888;
+$black-light-color: #30383b;
 $gray-color: #555; 
 $white-color: #fff;
-$pink-light: #FCF5EE;
+$white-light-color: #e3e6ea;
+$pink-light-color: #FCF5EE;
+
 
 /* Global Font Size Variable */
 $body-font-size: 15px;
@@ -18,8 +24,6 @@ $heading-font-size-3: 42px;
 $heading-font-size-4: 22px;
 $heading-font-size-5: 18px;
 $heading-font-size-6: 16px;
-
-/* Global @Funtion Style */
 
 /*Global @Mixin Style */
 @mixin button-global() {
@@ -31,12 +35,40 @@ $heading-font-size-6: 16px;
     border: 1px solid $primary-color;
     padding: 15px 30px;
     text-transform: uppercase;
+    cursor: pointer;
     &:hover{
         color: $secondary-color;
     }
 }
 
+@mixin section-spacer($unit: 30px) {
+    padding: $unit;
+}
 /* Global @Extend Style */
+%section-padding{
+    padding: 70px 0px;
+}
+%section-title-style{
+    .section-title-wrapper{
+        text-align: center;
+        span{
+            color: $body-font-color;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding: 30px 0px;
+        }
+        h3{
+            padding: 30px 0px;
+        }
+        
+    }
+}
+%transition-all-effect{
+    -webkit-animation-delay: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
 
 /* Global Style */
 body{
@@ -50,6 +82,7 @@ p{
     font-size: $body-font-size;
     font-family: $primary-font;
     font-weight: 300;
+    line-height: 28px;
 }
 h1, h2, h3, h4, h5, h6{
     color: $secondary-color;
@@ -78,10 +111,23 @@ h6{
 button,.btn-global{
     @include button-global();
 }
+.btn-round{
+    @extend .btn-global;
+    border-radius: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 a{
     color: $secondary-color;
     font-family: $primary-font;
     text-decoration: none;
+}
+.img-fit{
+    width: 100%;
+    display: block;
+}
+.section-spacer{
+    @include section-spacer();
 }
 
 /* Theme Main CSS */
@@ -148,7 +194,7 @@ header{
         color: $gray-color;
         line-height: 30px;
     }
-    .baner-button-box{
+    .baner-button-wrapper{
         display: flex;
         padding-top: 45px;
         align-items: center;
@@ -171,4 +217,228 @@ header{
     }
 }
 
+/* About Section */
+.about-section{
+    @extend %section-padding;
+    background: $white-color;
+}
+.about-section{
+    @extend %section-title-style;
+    .section-title-wrapper{
+        p{
+            width: 80%;
+            margin: auto;
+        }
+    }
+}
+.section-top-image{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0px;
+}
+.about-section{
+    .btn-wrapper{
+        text-align: center;
+        margin: auto;
+        padding-top: 55px;
+    }
+    .section-spacer{
+        @include section-spacer(50px);
+    }
+    //Feature Items
+    .feature-item-box{
+        position: relative;
 
+        .hover-effect{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background:  rgba(255, 129, 126, 0.9);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            .hover-content{
+                img{
+                    display: block;
+                    margin: auto;
+                    padding: 20px;
+                }
+                span{
+                    color: $white-color;
+                    font-family: $secondary-font;
+                    font-weight: 700;
+                }
+            }
+        }
+        &:hover{
+            .hover-effect{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Services Section */
+.services-section{
+    @extend %section-padding;
+    padding-top: 0px;
+    background: $white-color;
+}
+.services-section{
+    @extend %section-title-style;
+    
+    .section-spacer{
+        @include section-spacer();
+    }
+}
+.service-item-box{
+    padding: 20px;
+    background: $white-color;
+    border: 1px solid $white-light-color;
+    transition: 0.3s ease-in-out;
+    .service-body-content{
+        text-align: center;
+        h4{
+            padding-top: 30px;
+            padding-bottom: 20px;
+            a{
+                font-family: $secondary-font;
+            }
+        }
+        .service-button{
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background: $black-light-color;
+            border-color: $black-light-color;
+            margin: 30px 0px;
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                color: $white-color;
+                background: $primary-color;
+                border-color: $primary-color;
+            }
+        }
+    }
+
+    &:hover{
+        box-shadow: 0 5px 20px #f0f0f0;
+    }
+}
+
+/* Testimonial Section */
+.testimonial-section{
+    @extend %section-padding;
+    background: $pink-light-color;
+}
+.testimonial-carousel{
+    .owl-dot span{
+        width: 8px !important;
+        height: 8px !important;
+        background: $primary-color !important;
+    }
+}
+.testmonial-box{
+    text-align: center;
+    .quote-img{
+        width: auto !important;
+        margin: 0 auto;
+    }
+    p{
+        color: $gray-color;
+        font-size: 18px;
+        font-family: $secondary-font;
+        line-height: 32px;
+        padding: 40px 0px;
+        
+    }
+    .testimonial-user-box{
+        .image-circle-box{
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            overflow: hidden;
+            margin: 0px auto 20px;
+        }
+        h4{
+            font-weight: 400;
+            
+            span{
+                font-size: 15px;
+                font-family: $primary-font;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+/* Team Section */
+.team-section{
+    @extend %section-padding;
+    background: $white-color;
+}
+.team-section{
+    @extend %section-title-style;
+
+    .team-member-box{
+        position: relative;
+        @extend %transition-all-effect;
+
+        .team-member-bio{
+            width: calc(100% - 60px);
+            text-align: center;
+            background: $white-color;
+            padding: 30px 0px;
+            line-height: 30px;
+            box-shadow: 0 5px 20px #f0f0f0;
+            margin: 0 auto;
+            position: relative;
+            top: -50px;
+            @extend %transition-all-effect;
+    
+            .social-icon-box{
+                visibility: hidden;
+                margin-top: -20px;
+                padding: 10px 0px;
+                opacity: 0;
+                @extend %transition-all-effect;
+
+                a{
+                    width: 30px;
+                    height: 30px;
+                    margin: 0px 5px;
+                    border: 1px solid $secondary-color;
+                    line-height: 30px;
+                    border-radius: 100%;
+                    display: inline-block;   
+    
+                    &:hover{
+                        color: $white-color;
+                        background: $primary-color;
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        &:hover .team-member-bio{
+            top: -80px;
+        }
+        &:hover .social-icon-box{
+            visibility: visible;
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+    
+}
+
+/* Appoinment Section */
+.appoinment Section{
+    background: $pink-light-color;
+}

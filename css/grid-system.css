@@ -32,7 +32,7 @@ html {
     clear: both;
     display: block;
 }
-[class*=".col-md-"]{
+[class*="col-"]{
     padding-left: 10px;
     padding-right: 10px;
 }
