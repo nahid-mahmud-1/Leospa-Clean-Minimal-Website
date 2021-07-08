@@ -1,3 +1,14 @@
+//Menu
+function mobileMenu() {
+    var x = document.getElementById("nav-menu");
+    if (x.className === "header-menu-wrapper") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-menu-wrapper";
+    }
+  }
+
+
 //Feature Items Carousel
 $('.feature-carousel').owlCarousel({
     loop:false,

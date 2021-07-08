@@ -176,6 +176,7 @@ header{
 header{
     .row{
         align-items: center;
+        position: relative;
     }
     .main-menu{
         display: flex;
@@ -193,6 +194,14 @@ header{
                     color: $primary-color;
                 }
             }
+        }
+    }
+    .header-menu-wrapper{
+        .menu-icon{
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
 }
@@ -668,6 +677,18 @@ footer{
 /* Custom Media Query */
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 1199.99px) {
+    //Global CSS
+    .container{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .banner-section{
+        h2{
+            font-size: 49px;
+            font-size: 54px;
+        }
+    }
+
     /* About Section */
     .about-bg-small-img-2{
         top: 22%;
@@ -675,12 +696,37 @@ footer{
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 991.99px) {
-    /* Banner Section */
+@media only screen and (max-width: 1134px){
+    //Global CSS
+    .container{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
     .banner-section{
         h2{
             font-size: 49px;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 991.99px) {
+    //Global CSS
+    .container{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    /* Banner Section */
+    .banner-section{
+        .banner-img{
+            img{
+                display: none;
+            }
+        }
+        h2{
+            font-size: 49px;
+            padding: 20px 0px;
         }
     }
 
@@ -713,6 +759,39 @@ footer{
     footer, .contact-section, .blog-section, .team-section, .testimonial-section, .services-section, .about-section{
         padding: 20px 0px;
     }
+
+    //Header Responsive menu
+    header{
+        .header-menu-wrapper{
+            width: 100%;
+            .menu-icon{
+                color: $primary-color;
+                font-size: 35px;
+                display: block;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+            .main-menu{
+                display: none;
+            }
+        }
+        .header-menu-wrapper.responsive{
+            .main-menu{
+                display: block;
+                position: absolute;
+                background: $pink-light-color;
+                top: 40px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                padding: 30px;
+            }
+        }
+        
+    }
+
     //appoinment section
     .appoinment-section{
         .section-spacer{
@@ -774,6 +853,25 @@ footer{
         }
     }
 
+    //Header Section
+    header{
+        .col-sm-3{
+            max-width: 50%;
+        }
+        .col-sm-9{
+            max-width: 50%;
+        }
+        .header-menu-wrapper.responsive{
+            .main-menu{
+                width: 100%;
+            }
+        }
+        
+    }
+
+    //Banner Section
+
+
     //About Section
     .about-bg-small-img-1{
         top: 15px;
@@ -800,4 +898,4 @@ footer{
             padding: 0;
         }
     }
-} 
+}

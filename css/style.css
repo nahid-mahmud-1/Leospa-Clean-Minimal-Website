@@ -153,6 +153,7 @@ header {
 
 header .row {
   align-items: center;
+  position: relative;
 }
 header .main-menu {
   display: flex;
@@ -168,6 +169,12 @@ header .main-menu li a {
 }
 header .main-menu li a:hover {
   color: #ff817e;
+}
+header .header-menu-wrapper .menu-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* Banner Section */
@@ -559,17 +566,46 @@ footer p span {
 /* Custom Media Query */
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 1199.99px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .banner-section h2 {
+    font-size: 49px;
+    font-size: 54px;
+  }
+
   /* About Section */
   .about-bg-small-img-2 {
     top: 22%;
     right: 145px;
   }
 }
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 991.99px) {
-  /* Banner Section */
+@media only screen and (max-width: 1134px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   .banner-section h2 {
     font-size: 49px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 991.99px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* Banner Section */
+  .banner-section .banner-img img {
+    display: none;
+  }
+  .banner-section h2 {
+    font-size: 49px;
+    padding: 20px 0px;
   }
 
   /* About Section */
@@ -596,6 +632,32 @@ footer p span {
 
   footer, .contact-section, .blog-section, .team-section, .testimonial-section, .services-section, .about-section {
     padding: 20px 0px;
+  }
+
+  header .header-menu-wrapper {
+    width: 100%;
+  }
+  header .header-menu-wrapper .menu-icon {
+    color: #ff817e;
+    font-size: 35px;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  header .header-menu-wrapper .main-menu {
+    display: none;
+  }
+  header .header-menu-wrapper.responsive .main-menu {
+    display: block;
+    position: absolute;
+    background: #FFF9F8;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
   }
 
   .appoinment-section .section-spacer {
@@ -653,6 +715,16 @@ footer p span {
   .section-title-wrapper p {
     width: 90% !important;
     margin: 0 auto;
+  }
+
+  header .col-sm-3 {
+    max-width: 50%;
+  }
+  header .col-sm-9 {
+    max-width: 50%;
+  }
+  header .header-menu-wrapper.responsive .main-menu {
+    width: 100%;
   }
 
   .about-bg-small-img-1 {
