@@ -9,7 +9,10 @@ $('.feature-carousel').owlCarousel({
             items:1
         },
         600:{
-            items:3
+            items:2
+        },
+        768:{
+            items: 3
         },
         1000:{
             items:4
