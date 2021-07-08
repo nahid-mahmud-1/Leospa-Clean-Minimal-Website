@@ -37,6 +37,7 @@ $heading-font-size-6: 16px;
     padding: 15px 30px;
     text-transform: uppercase;
     cursor: pointer;
+    @extend %transition-all-effect;
     &:hover{
         color: $secondary-color;
     }
@@ -468,7 +469,8 @@ header{
                     border: 1px solid $secondary-color;
                     line-height: 30px;
                     border-radius: 100%;
-                    display: inline-block;   
+                    display: inline-block;
+                    @extend %transition-all-effect;   
     
                     &:hover{
                         color: $white-color;

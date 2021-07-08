@@ -46,7 +46,7 @@ footer, .contact-section, .blog-section, .team-section, .testimonial-section, .s
   height: 60px !important;
 }
 
-.footer-social-icon a, .footer-menu-wrapper a, .contact-section .address-wrapper address a, .team-section .team-member-box .team-member-bio .social-icon-box, .team-section .team-member-box .team-member-bio, .team-section .team-member-box, header .main-menu li a {
+.footer-social-icon a, .footer-menu-wrapper a, .contact-section .address-wrapper address a, .team-section .team-member-box .team-member-bio .social-icon-box a, .team-section .team-member-box .team-member-bio .social-icon-box, .team-section .team-member-box .team-member-bio, .team-section .team-member-box, header .main-menu li a, button, .btn-global, .btn-round {
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
