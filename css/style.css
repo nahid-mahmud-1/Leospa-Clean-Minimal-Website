@@ -728,6 +728,10 @@ footer p span {
     width: 100%;
   }
 
+  .banner-section h2 {
+    line-height: 55px;
+  }
+
   .about-bg-small-img-1 {
     top: 15px;
     left: 5%;
