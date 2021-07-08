@@ -532,6 +532,7 @@ footer p span {
 
 .footer-menu-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 20px 0px;
 }
@@ -749,6 +750,11 @@ footer p span {
   }
   .contact-section .section-spacer {
     padding: 0;
+  }
+
+  .footer-menu-wrapper a {
+    font-size: 14px;
+    padding: 10px;
   }
 }
 
