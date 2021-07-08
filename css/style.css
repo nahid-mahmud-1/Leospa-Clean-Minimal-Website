@@ -172,7 +172,7 @@ header .main-menu li a:hover {
 
 /* Banner Section */
 .banner-section {
-  padding: 170px 0px 80px;
+  padding: 170px 0px 100px;
   background: #fff url(../images/leaf.png) no-repeat center left;
   background-size: 12%;
   position: relative;
@@ -221,11 +221,26 @@ header .main-menu li a:hover {
 /* About Section */
 .about-section {
   background: #fff;
+  position: relative;
 }
 
 .about-section .section-title-wrapper p {
   width: 80%;
   margin: auto;
+}
+
+.about-bg-small-img-1 {
+  max-width: 150px;
+  position: absolute;
+  top: 40px;
+  left: 16%;
+}
+
+.about-bg-small-img-2 {
+  position: absolute;
+  max-width: 100px;
+  top: 22%;
+  right: 145px;
 }
 
 .section-top-image {

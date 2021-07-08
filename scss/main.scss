@@ -198,7 +198,7 @@ header{
 
 /* Banner Section */
 .banner-section{
-    padding: 170px 0px 80px;
+    padding: 170px 0px 100px;
     background: $white-color url(../images/leaf.png) no-repeat center left;
     background-size: 12%;
     position: relative;
@@ -252,6 +252,7 @@ header{
 .about-section{
     @extend %section-padding;
     background: $white-color;
+    position: relative;
 }
 .about-section{
     @extend %section-title-style;
@@ -261,6 +262,18 @@ header{
             margin: auto;
         }
     }
+}
+.about-bg-small-img-1{
+    max-width: 150px;
+    position: absolute;
+    top: 40px;
+    left: 16%;
+}
+.about-bg-small-img-2{
+    position: absolute;
+    max-width: 100px;
+    top: 22%;
+    right: 145px;
 }
 .section-top-image{
     width: 100%;
